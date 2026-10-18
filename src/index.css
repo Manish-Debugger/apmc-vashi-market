@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden;
+    background-color: #f8fafc;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+  .agri-card {
+    @apply bg-white border border-slate-200/80 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  .agri-badge-green {
+    @apply bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-0.5 rounded-full text-xs font-medium inline-flex items-center gap-1;
+  }
+
+  .agri-badge-amber {
+    @apply bg-amber-50 text-amber-700 border border-amber-200 px-2.5 py-0.5 rounded-full text-xs font-medium inline-flex items-center gap-1;
+  }
+
+  .agri-badge-blue {
+    @apply bg-blue-50 text-blue-700 border border-blue-200 px-2.5 py-0.5 rounded-full text-xs font-medium inline-flex items-center gap-1;
+  }
+
+  .agri-badge-red {
+    @apply bg-rose-50 text-rose-700 border border-rose-200 px-2.5 py-0.5 rounded-full text-xs font-medium inline-flex items-center gap-1;
+  }
+
+  .agri-badge-neutral {
+    @apply bg-slate-100 text-slate-600 border border-slate-200 px-2.5 py-0.5 rounded-full text-xs font-medium inline-flex items-center gap-1;
+  }
+
+  .agri-input {
+    @apply bg-white border border-slate-300 rounded-xl px-3.5 py-2 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 transition-all;
+  }
+
+  .agri-select {
+    @apply bg-white border border-slate-300 rounded-xl px-3.5 py-2 text-sm text-slate-800 focus:outline-none focus:border-emerald-600 focus:ring-2 focus:ring-emerald-500/20 transition-all;
+  }
+
+  .agri-btn-primary {
+    @apply bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-medium px-4 py-2 rounded-xl shadow-sm hover:shadow transition-all flex items-center justify-center gap-2 text-sm active:scale-[0.98];
+  }
+
+  .agri-btn-secondary {
+    @apply bg-white hover:bg-slate-50 text-slate-700 border border-slate-300 hover:border-slate-400 font-medium px-4 py-2 rounded-xl transition-all flex items-center justify-center gap-2 text-sm active:scale-[0.98];
+  }
+
+  .agri-btn-amber {
+    @apply bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-medium px-4 py-2 rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 text-sm active:scale-[0.98];
+  }
+}
